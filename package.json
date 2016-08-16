@@ -1,31 +1,42 @@
 {
     "version": "0.0.0",
     "exportedEnvVars": {
-        "base_no_ppx_installed": {
-            "global": true,
-            "globalCollisionBehavior": "clobber",
-            "val": "true"
-        },
-        "PATH": {
+        "FINDLIB": {
             "global": true,
             "resolveAsRelativePath": true,
             "globalCollisionBehavior": "joinPath",
-            "val": "./_build/ocamlfind/bin"
+            "val": "./_build/ocamlfind/lib"
+        },
+        "base_no_ppx_version": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "0.0.0"
         },
         "base_no_ppx_enable": {
             "global": true,
             "globalCollisionBehavior": "clobber",
             "val": "enable"
         },
-        "FINDLIB": {
+        "base_no_ppx_installed": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "true"
+        },
+        "version": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "0.0.0"
+        },
+        "PATH": {
             "global": true,
             "resolveAsRelativePath": true,
             "globalCollisionBehavior": "joinPath",
-            "val": "./_build/ocamlfind/lib"
+            "val": "./_build/ocamlfind/bin"
         }
     },
     "name": "base-no-ppx",
     "dependencies": {
+        "substs": "https://github.com/yunxing/opam-installer-bin.git",
         "nopam": "https://github.com/yunxing/nopam.git",
         "ocaml": "https://github.com/npm-opam/ocaml.git#npm-4.02.3",
         "dependency-env": "https://github.com/npm-ml/dependency-env.git"
