@@ -1,5 +1,6 @@
 {
-    "version": "0.0.0",
+    "optDependencies": {},
+    "name": "base-no-ppx",
     "exportedEnvVars": {
         "FINDLIB": {
             "global": true,
@@ -34,7 +35,7 @@
             "val": "./_build/ocamlfind/bin"
         }
     },
-    "name": "base-no-ppx",
+    "version": "0.0.0",
     "dependencies": {
         "substs": "https://github.com/yunxing/substs.git",
         "nopam": "https://github.com/yunxing/nopam.git",
