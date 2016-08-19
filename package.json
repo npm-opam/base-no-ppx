@@ -1,29 +1,8 @@
 {
-    "optDependencies": {},
     "name": "base-no-ppx",
+    "optionalDependencies": {},
     "exportedEnvVars": {
-        "FINDLIB": {
-            "global": true,
-            "resolveAsRelativePath": true,
-            "globalCollisionBehavior": "joinPath",
-            "val": "./_build/ocamlfind/lib"
-        },
         "base_no_ppx_version": {
-            "global": true,
-            "globalCollisionBehavior": "clobber",
-            "val": "0.0.0"
-        },
-        "base_no_ppx_enable": {
-            "global": true,
-            "globalCollisionBehavior": "clobber",
-            "val": "enable"
-        },
-        "base_no_ppx_installed": {
-            "global": true,
-            "globalCollisionBehavior": "clobber",
-            "val": "true"
-        },
-        "version": {
             "global": true,
             "globalCollisionBehavior": "clobber",
             "val": "0.0.0"
@@ -33,6 +12,17 @@
             "resolveAsRelativePath": true,
             "globalCollisionBehavior": "joinPath",
             "val": "./_build/ocamlfind/bin"
+        },
+        "version": {
+            "global": true,
+            "globalCollisionBehavior": "clobber",
+            "val": "0.0.0"
+        },
+        "FINDLIB": {
+            "global": true,
+            "resolveAsRelativePath": true,
+            "globalCollisionBehavior": "joinPath",
+            "val": "./_build/ocamlfind/lib"
         }
     },
     "version": "0.0.0",
@@ -44,6 +34,6 @@
         "dependency-env": "https://github.com/npm-ml/dependency-env.git"
     },
     "scripts": {
-        "postinstall": "eval $(dependencyEnv) && nopam && (opam-installer --prefix=$opam_prefix || true)"
+        "postinstall": "eval $(dependencyEnv) && nopam && (opam-installer --prefix=$opam_prefix || true) && injectOpamEnvs"
     }
 }
